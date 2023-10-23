@@ -1,4 +1,5 @@
 #!/bin/bash
+date > /tmp/time.txt
 
 #install gcloud
 sudo apt-get update
@@ -21,7 +22,7 @@ sudo apt update
 apt-cache policy docker-ce > /tmp/docker.txt
 
 sudo apt install docker-ce -y
-
+date >> /tmp/time.txt
 #sudo apt-get install google-cloud -y
 #sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin -y
 #sudo apt-get install kubectl -y

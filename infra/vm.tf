@@ -1,8 +1,8 @@
-resource "google_compute_instance" "managment-vm" {
+resource "google_compute_instance" "controle-vm" {
 
-  name         = "managment-vm"
+  name         = "controle-vm"
   machine_type = "e2-standard-2"
-  zone         = "us-central1-c"
+  zone         = "us-west4-a"
 
   tags = ["foo", "bar"]
 
@@ -31,6 +31,7 @@ resource "google_compute_instance" "managment-vm" {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     email  = google_service_account.gcp-project-sa.email
     scopes = ["cloud-platform"]
+
   }
 
 }
