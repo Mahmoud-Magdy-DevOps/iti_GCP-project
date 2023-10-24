@@ -24,9 +24,7 @@ resource "google_compute_instance" "controle-vm" {
     }
   }
   metadata_startup_script = file("configurationscript.sh")
-  metadata = {
-    foo = "bar"
-  }
+
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     email  = google_service_account.gcp-project-sa.email
